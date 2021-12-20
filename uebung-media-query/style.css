@@ -26,11 +26,41 @@ body {
   display: block;
 }
 
-.card h1 {
+.card h2 {
   background: #fff;
   padding: 5px;
 }
 
 .row {
   display: block;
+}
+
+/* Ab einer Bildschirmbreite von 1140px wird der Body rot 
+A2: Die Karten sollen ab Weite 1140px nebeneinader stehen
+A3: Zwischen einer Bildschirmbreite von 768px und 1139px soll der Body gelb sein. Ab 1140px ist er rot. Alles kleiner als 768px ist er weiss.
+A4: Die Überschift h1 soll auf dem Ipad 2rem (32px) groß sein und auf dem großen Bilschirm 2.5rem (40px).
+*/
+
+@media (min-width: 768px) and (max-width: 1139px) {
+  body {
+    background-color: yellow;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1140px) {
+  body {
+    background-color: red;
+  }
+
+  .row {
+    display: flex;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
 }
