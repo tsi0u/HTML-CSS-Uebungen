@@ -29,10 +29,6 @@ section {
   min-width: 10px;
   padding: 1rem 0;
   min-height: 300px;
-  display: flex;
-  justify-content: center; /*Platz auf der x-Achse/horizontale*/
-  align-items: stretch; /*Platz auf der y-Achse/vertikale*/
-  flex-direction: row;
 }
 
 .col {
@@ -44,12 +40,10 @@ section {
 
 .trolley-grey {
   background: #7d7c84;
-  order: 1;
 }
 
 .sea-green {
   background: #2d93ad;
-  order: 3;
 }
 
 .middle-red {
@@ -62,7 +56,6 @@ section {
 
 .orange {
   background: orange;
-  order: 2;
 }
 
 .olive {
