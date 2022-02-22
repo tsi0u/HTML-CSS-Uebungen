@@ -8,6 +8,7 @@ body {
   width: 100%;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 100%;
+  background: #fff;
 }
 
 .wrapper {
@@ -34,3 +35,28 @@ body {
 .row {
   display: block;
 }
+/*Media Query für Ipad bis großer Bildschirm*/
+@media (min-width: 810px) and (max-width: 1199px) {
+  body {
+    background: yellow;
+  }
+  h2 {
+    text-align: center;
+  }
+} /*Ipad (sonst: letzte Regel greift)*/
+@media (min-width: 1200px) /*wenn Bildschirm größer ist als 1200px, dann...*/ {
+  body {
+    background: red;
+  }
+  .row {
+    display: flex;
+  }
+  h1, h2 {
+    text-align: center;
+    font-size: 36px; /*3vw* --störanfälliger/;
+
+}
+/*px - harte Größe, wird standardmäßig genutzt
+% - richtet sich nach Elternteil
+vw - Prozent des Viewports (viewport width: jeweilige Ansicht/Breite des Bildschirms)
+*/

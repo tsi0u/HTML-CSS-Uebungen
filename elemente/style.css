@@ -1,1 +1,33 @@
+/*Box-Modell -- immer in die erste zeile des Style-Sheets; wichtig für responsive design*/
+* {
+  box-sizing: border-box; /*Gesamtbreite; rechnet von der Kante rückwärts --> Standard-Wert ist content-box*/ 
+}
+div {
+  width: 400px;
+  border-width: 1px;
+  height: 100px;
+  border-color: blue;
+  border-style: solid;
+  padding: 10px;
+  margin: 20px;
+  display: block; /*wie soll das Element angezeigt werden*/ 
+} /* 
 
+Gesamtweite= innere Weite + 2x padding + 2x border + 2x margin*/
+
+a {
+  width: 400px;
+  padding: 10px;
+  display: inline;
+  /*akzeptiert keine Höhe & Weite, weil Inline-Element*/
+}
+
+img {
+  width: 400px;
+  display: block;
+  /*Hybrid-Form*/
+}
+span {
+  color: pink;
+  font-weight: bold;
+}

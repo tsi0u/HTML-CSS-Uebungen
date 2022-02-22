@@ -4,12 +4,11 @@
 
 html,
 body {
-  height: 100%;
+  height: 100%; /*100% vom Elternteil, in dem Fall html (Elternteil) --> 100% Bildschirm*/
   width: 100%;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 100%;
+  font-size: 100%; /*Standardschriftgröße im Browser: 16px*/
 }
-
 h1 {
   margin: 1rem 0;
 }
@@ -20,35 +19,41 @@ section {
 
 .wrapper {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 auto; /*Abstand zum Body*/
   min-height: 300px;
 }
 
-.row {
+.row { /*mit der Mudder reden*/
   width: 100%;
   min-width: 10px;
   padding: 1rem 0;
   min-height: 300px;
+  background: yellow;
+  display: flex; /*"ich bin ein Blockelement aber meine Kinder stehen nebeneinander" --> weil "Reihe ist die Mama der Spalten"*/
+  justify-content: space-between; /*Verteilung des Restplatzes entlang der x-Achse*/
+  align-items: stretch; /*Verteilung des Restplatzes entlang y-Achse <-- geht nur bei display:flex!*/
 }
 
-.col {
+.col {/*mit den Kindern reden*/
   min-width: 20px;
   min-height: 20px;
   margin: 10px;
-  width: 20%;
+  /*display: inline --> ungünstig, weil keine Weite usw. mehr einstellbar*/
+  flex-grow: 1; /*gilt für alle columns*/
 }
 
 .trolley-grey {
   background: #7d7c84;
+  flex-grow: 1; /*"du darfst wachsen"*/
 }
 
 .sea-green {
-  background: #2d93ad;
+  background: #2d93ad; /*"gerechtes Erbe"*/
 }
 
 .middle-red {
   background: #de8f6e;
-}
+}/*lalala*/
 
 .black {
   background: #000;
