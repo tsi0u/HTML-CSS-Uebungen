@@ -29,27 +29,56 @@ section {
 }
 
 .container {
+  background-color: azure;
   width: 100%;
   height: 600px;
+  position: relative; /*alle Kinder orientieren sich an dem -- Position eingestellt= Message an Kinder: "ja, ich bin weiterhin dein Chef"*/
+  left: 100px; /*verschiebt sich und alle Kinder 100px vom Rand --> greift nur wenn die Position eingestellt ist*/
 }
 
 .element {
   width: 200px;
-  height: 200px;
+  height: 200px; /*hier könnte auch position:absolute stehen, da Elternteil*/
 }
 
 .electric-purple {
   background: #c200fb;
+  position: absolute; /*hebt das Element heraus/hervor-- dann kann man es positionieren*/
+  /*left: 0; /*definiert den Abstand vom linken Rand = geh so weit nach links wie möglich*/
+  /* top: 0; /*Abstand vom oberen Rand*/
+  right: 100px;
+  top: 100px; /*raspberry verdeckt purple, wenn raspberry im Skript weiter unten steht und sonst nichts eingestellt ist*/
+  z-index: 52; /*hebt das Element auf die 50. Ebene; */
 }
 
 .raspberry {
   background: #ec0868;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 51;
 }
 
 .ferrari-red {
   background: #fc2f00;
+  position: absolute;
+  bottom: 200px;
+  left: 200px;
+  z-index: 53;
 }
 
 .black {
   background: #000;
+  position: fixed; /*bleibt am Bildschirm fixiert*/
+  top: 0;
+  left: -200px;
+  z-index: 54;
+  transition: all 1s /*von -200px zu dem hover-Wert left: 0)*/;
+}
+.container:hover .black /*wenn ich über den container hover, dann soll was mit black passieren*/ {
+  left: 0;
+  top: 300px;
+  background-color:aquamarine;
+  /*border-radius: 50%;*/
+  transform: rotate(80deg);
 }

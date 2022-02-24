@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'Geomanist Bold';
-  src: url('fonts/geomanist-bold.woff2') format('woff2'),
-    url('fonts/geomanist-bold.woff') format('woff');
+  font-family: "Geomanist Bold";
+  src: url("fonts/geomanist-bold.woff2") format("woff2"),
+    url("fonts/geomanist-bold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 :root {
-  font-family: 'Geomanist Bold', sans-serif;
+  font-family: "Geomanist Bold", sans-serif;
 }
 
 /* Box sizing rules */
@@ -27,10 +27,10 @@ figcaption {
 
 h1,
 h2 {
-  font-family: 'Geomanist Bold';
+  font-family: "Geomanist Bold";
   font-weight: 900;
   text-transform: uppercase;
-  font-size: 10rem;
+  font-size: 10rem; /*1rem = 16px*/
 }
 
 figcaption {
@@ -109,3 +109,34 @@ img {
 figure {
   max-width: 400px;
 }
+/*Übung -- Veränderung der Elemente*/
+
+
+.box {
+  position: relative; /*"alles was in dir absolut positioniert ist richtet sich nach dir"*/
+  top: 10rem; /*schiebt die Boxen um die Höhe des h1 nach unten*/
+  z-index:1;
+}
+
+h2 {
+  position: absolute;
+  z-index: 2;
+}
+figure { /*nimmt img und figcaption raus und schickt es an den oberen rand der Box*/ 
+  position: absolute;
+  top: 0;
+  left: 100px;
+  z-index: 3;
+}
+figcaption {
+  position: absolute;
+  bottom: 20px; 
+  z-index: 4;}
+
+  .heading {
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    z-index:5;
+  } /*Überschrift 1 ist fixiert*/
+
